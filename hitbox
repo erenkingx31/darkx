@@ -2,8 +2,8 @@ local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local TextButton = Instance.new("TextButton")
 local TextLabel = Instance.new("TextLabel")
-local close = Instance.new("TextButton")
 local TextLabel_2 = Instance.new("TextLabel")
+local close = Instance.new("TextButton")
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -12,17 +12,17 @@ Frame.Parent = ScreenGui
 Frame.BackgroundColor3 = Color3.fromRGB(154, 0, 0)
 Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BorderSizePixel = 0
-Frame.Position = UDim2.new(0.337788582, 0, 0.298449606, 0)
+Frame.Position = UDim2.new(0.335764289, 0, 0.313953489, 0)
 Frame.Size = UDim2.new(0, 266, 0, 208)
 
 TextButton.Parent = Frame
 TextButton.BackgroundColor3 = Color3.fromRGB(26, 255, 1)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
-TextButton.Position = UDim2.new(0.124060154, 0, 0.543269217, 0)
-TextButton.Size = UDim2.new(0, 200, 0, 50)
+TextButton.Position = UDim2.new(0, 0, 0.408653855, 0)
+TextButton.Size = UDim2.new(0, 265, 0, 78)
 TextButton.Font = Enum.Font.SourceSansBold
-TextButton.Text = "CLİCK TO START"
+TextButton.Text = "SCRİPT BAŞLATILDI "
 TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.TextSize = 30.000
 
@@ -37,13 +37,24 @@ TextLabel.Text = "BY DARKZ "
 TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel.TextSize = 30.000
 
+TextLabel_2.Parent = Frame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(154, 0, 0)
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.14070107, 0, 0.132491037, 0)
+TextLabel_2.Size = UDim2.new(0, 191, 0, 50)
+TextLabel_2.Font = Enum.Font.SourceSansBold
+TextLabel_2.Text = "OP HİTBOX SCRİPT"
+TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.TextSize = 35.000
+
 close.Name = "close"
-close.Parent = Frame
+close.Parent = ScreenGui
 close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 close.BackgroundTransparency = 1.000
 close.BorderColor3 = Color3.fromRGB(0, 0, 0)
 close.BorderSizePixel = 0
-close.Position = UDim2.new(0.846463084, 0, -0.00375028746, 0)
+close.Position = UDim2.new(0.793831527, 0, 0.314079165, 0)
 close.Size = UDim2.new(0, 40, 0, 36)
 close.Font = Enum.Font.Unknown
 close.Text = "x"
@@ -52,18 +63,7 @@ close.TextScaled = true
 close.TextSize = 14.000
 close.TextWrapped = true
 
-TextLabel_2.Parent = ScreenGui
-TextLabel_2.BackgroundColor3 = Color3.fromRGB(154, 0, 0)
-TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_2.BorderSizePixel = 0
-TextLabel_2.Position = UDim2.new(0.388821393, 0, 0.348837197, 0)
-TextLabel_2.Size = UDim2.new(0, 191, 0, 50)
-TextLabel_2.Font = Enum.Font.SourceSansBold
-TextLabel_2.Text = "OP HİTBOX SCRİPT"
-TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_2.TextSize = 35.000
-
-local function JUEHVE_fake_script() -- TextButton.LocalScript 
+local function KTAP_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	_G.HeadSize = 30
@@ -85,8 +85,8 @@ local function JUEHVE_fake_script() -- TextButton.LocalScript
 		end
 	end)
 end
-coroutine.wrap(JUEHVE_fake_script)()
-local function VMHRHLH_fake_script() -- TextButton.Script 
+coroutine.wrap(KTAP_fake_script)()
+local function ZGMND_fake_script() -- TextButton.Script 
 	local script = Instance.new('Script', TextButton)
 
 	_G.HeadSize = 30
@@ -108,8 +108,8 @@ local function VMHRHLH_fake_script() -- TextButton.Script
 		end
 	end)
 end
-coroutine.wrap(VMHRHLH_fake_script)()
-local function AJLZC_fake_script() -- close.LocalScript 
+coroutine.wrap(ZGMND_fake_script)()
+local function SGXM_fake_script() -- close.LocalScript 
 	local script = Instance.new('LocalScript', close)
 
 	local frame = script.Parent.Parent
@@ -122,4 +122,4 @@ local function AJLZC_fake_script() -- close.LocalScript
 	closeButton.MouseButton1Click:Connect(onCloseButtonClicked)
 	
 end
-coroutine.wrap(AJLZC_fake_script)()
+coroutine.wrap(SGXM_fake_script)()
