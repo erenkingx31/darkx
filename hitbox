@@ -63,12 +63,13 @@ TextLabel_2.Text = "OP HİTBOX SCRİPT"
 TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_2.TextSize = 35.000
 
-local function ZPTPQAH_fake_script() -- TextButton.LocalScript 
+local function JUEHVE_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	_G.HeadSize = 30
 	_G.Disabled = true
 	
+	game:GetService('RunService').RenderStepped:connect(function()
 		if _G.Disabled then
 			for i,v in next, game:GetService('Players'):GetPlayers() do
 				if v.Name ~= game:GetService('Players').LocalPlayer.Name then
@@ -84,30 +85,31 @@ local function ZPTPQAH_fake_script() -- TextButton.LocalScript
 		end
 	end)
 end
-coroutine.wrap(ZPTPQAH_fake_script)()
-local function HHYWN_fake_script() -- TextButton.Script 
+coroutine.wrap(JUEHVE_fake_script)()
+local function VMHRHLH_fake_script() -- TextButton.Script 
 	local script = Instance.new('Script', TextButton)
 
 	_G.HeadSize = 30
 	_G.Disabled = true
 	
-	if _G.Disabled then
-		for i,v in next, game:GetService('Players'):GetPlayers() do
-			if v.Name ~= game:GetService('Players').LocalPlayer.Name then
-				pcall(function()
-					v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
-					v.Character.HumanoidRootPart.Transparency = 0.7
-					v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really blue")
-					v.Character.HumanoidRootPart.Material = "Neon"
-					v.Character.HumanoidRootPart.CanCollide = false
-				end)
+	game:GetService('RunService').RenderStepped:connect(function()
+		if _G.Disabled then
+			for i,v in next, game:GetService('Players'):GetPlayers() do
+				if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+					pcall(function()
+						v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+						v.Character.HumanoidRootPart.Transparency = 0.7
+						v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really blue")
+						v.Character.HumanoidRootPart.Material = "Neon"
+						v.Character.HumanoidRootPart.CanCollide = false
+					end)
+				end
 			end
 		end
-	end
 	end)
 end
-coroutine.wrap(HHYWN_fake_script)()
-local function FQNMK_fake_script() -- close.LocalScript 
+coroutine.wrap(VMHRHLH_fake_script)()
+local function AJLZC_fake_script() -- close.LocalScript 
 	local script = Instance.new('LocalScript', close)
 
 	local frame = script.Parent.Parent
@@ -120,4 +122,4 @@ local function FQNMK_fake_script() -- close.LocalScript
 	closeButton.MouseButton1Click:Connect(onCloseButtonClicked)
 	
 end
-coroutine.wrap(FQNMK_fake_script)()
+coroutine.wrap(AJLZC_fake_script)()
